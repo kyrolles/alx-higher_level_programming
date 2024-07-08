@@ -1,0 +1,5 @@
+print(type([12,33,45,55,23])) #the type is List
+
+print(type((23,45,56,32,32))) #the type is tupe
+
+print(type{name: kyrolles, age: 23, type: male}) #the type is dect dictionary

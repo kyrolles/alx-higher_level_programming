@@ -1,0 +1,166 @@
+//Interpolating and Formatting Strings Before Python 3.6
+
+
+The Modulo Operator, %
+--------------------
+
+>>> name = "Jane"
+
+>>> "Hello, %s!" % name
+'Hello, Jane!'
+
+-------------------------------------------------------
+
+>>> name = "Jane"
+>>> age = 25
+
+>>> "Hello, %s! You're %s years old." % (name, age)
+'Hello, Jane! You're 25 years old.'
+
+---------------------------------------------------------
+
+>>> "Hello, %(name)s! You're %(age)s years old." % {"name": "Jane", "age": 25}
+"Hello, Jane! You're 25 years old."
+
+----------------------------------------------------------
+
+>>> "Balance: $%.2f" % 5425.9292
+'Balance: $5425.93'
+
+>>> print("Name: %s\nAge: %5s" % ("John", 35))
+Name: John
+Age:    35
+
+---------------------------------------------------------
+
+>>> "The personal info is: %s" % (("John", 35),)
+"The personal info is: ('John', 35)"
+
+---------------------------------------------------------
+
+
+
+
+
+
+The str.format() Method
+------------------------
+
+>>> name = "Jane"
+>>> age = 25
+
+>>> "Hello, {}! You're {} years old.".format(name, age)
+"Hello, Jane! You're 25 years old."
+
+----------------------------------------------------------
+
+>>> name = "Jane"
+>>> age = 25
+
+>>> "Hello, {}! You're {} years old.".format(name, age)
+"Hello, Jane! You're 25 years old."
+
+-----------------------------------------------------------
+
+>>> "Hello, {1}! You're {0} years old.".format(age, name)
+"Hello, Jane! You're 25 years old."
+
+-----------------------------------------------------------
+
+>>> "Hello, {name}! You're {age} years old.".format(name="Jane", age=25)
+"Hello, Jane! You're 25 years old."
+
+-----------------------------------------------------------
+
+>>> person = {"name": "Jane", "age": 25}
+
+>>> "Hello, {name}! You're {age} years old.".format(**person)
+"Hello, Jane! You're 25 years old."
+
+------------------------------------------------------------
+
+>>> "Balance: ${:.2f}".format(5425.9292)
+'Balance: $5425.93'
+
+>>> "{:=^30}".format("Centered string")
+'=======Centered string========'
+In the second example, you use the :=^30 format specifier.
+ In this case, you’re telling .format() to format the input value using the = symbol as a
+  filler character. The ^ symbol centers the input value by
+   inserting = symbols on both sides to reach thirty characters.
+
+------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+Doing String Interpolation With F-Strings in Python
+>>> name = "Jane"
+>>> age = 25
+
+>>> f"Hello, {name}! You're {age} years old."
+'Hello, Jane! You're 25 years old.'
+
+------------------------------------------------------------
+
+>>> name = "Jane"
+>>> age = 25
+
+>>> f"Hello, {name.upper()}! You're {age} years old."
+"Hello, JANE! You're 25 years old."
+
+>>> f"{[2**n for n in range(3, 9)]}"
+'[8, 16, 32, 64, 128, 256]'
+
+
+-----------------------------------------------------------
+
+
+>>> format(5425.9292, ".2f")
+'5425.93'
+
+
+------------------------------------------------------------
+
+>>> balance = 5425.9292
+
+>>> f"Balance: ${balance:.2f}"
+'Balance: $5425.93'
+
+>>> heading = "Centered string"
+>>> f"{heading:=^30}"
+'=======Centered string========'
+
+-----------------------------------------------------------
+
+>>> integer = -1234567
+>>> f"Comma as thousand separators: {integer:,}"
+'Comma as thousand separators: -1,234,567'
+
+>>> sep = "_"
+>>> f"User's thousand separators: {integer:{sep}}"
+'User's thousand separators: -1_234_567'
+
+>>> floating_point = 1234567.9876
+>>> f"Comma as thousand separators and two decimals: {floating_point:,.2f}"
+'Comma as thousand separators and two decimals: 1,234,567.99'
+
+>>> date = (9, 6, 2023)
+>>> f"Date: {date[0]:02}-{date[1]:02}-{date[2]}"
+'Date: 09-06-2023'
+
+>>> from datetime import datetime
+>>> date = datetime(2023, 9, 26)
+>>> f"Date: {date:%m/%d/%Y}"
+'Date: 09/26/2023'
+
+-----------------------------------------------------------
