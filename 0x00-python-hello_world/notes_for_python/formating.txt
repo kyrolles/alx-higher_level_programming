@@ -1,7 +1,7 @@
 //Interpolating and Formatting Strings Before Python 3.6
 
 
-The Modulo Operator, %
+"The" Modulo Operator, %
 --------------------
 
 >>> name = "Jane"
