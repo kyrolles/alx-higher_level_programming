@@ -6,6 +6,6 @@ for num1 in range(0, 9):
         elif num1 > num2:
             continue
         elif num1 == 8 and num2 == 9:
-            print("{}\n".format((str(num1)+str(num2)).zfill(2)))
+            print("{}".format((str(num1)+str(num2)).zfill(2)))
         else:
             print("{}, ".format((str(num1)+str(num2)).zfill(2)), end='')
