@@ -7,4 +7,4 @@ def pow(a, b):
     #     x *= a
     #     b -= 1
     # return (x)
-    return(a**b)
+    return (a**b)
