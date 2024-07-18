@@ -475,3 +475,41 @@
 # say_hello("youssef",21)
 
 # print("------------------------------------------\n")
+
+# import random
+# print(random)
+# print(f"print random float number {random.random()}")
+
+# print(dir(random))
+
+# from random import randint, random
+# print(f"print Random Integer {random.randint(50, 100)}")
+# print(f"print Random float {random.random()}")
+# print(random.randint(2,10))
+
+# print("------------------------------------------\n")
+
+# import sys
+# print(sys.path)
+
+# import kok as yk
+# print(dir(yk))
+
+# yk.sayAloha("kyrolles")
+# yk.sayHowareyou("Osama")
+# yk.sayWhatUP("youssef")
+
+# import kok
+# from kok import sayAloha as kk , sayHowareyou as ss
+
+# ss("kyrolles")
+# kk("Bodey")
+
+import termcolor
+import pyfiglet
+
+# print(dir(pyfiglet))
+# print(pyfiglet.figlet_format("Kyrolles"))
+# print(pyfiglet.figlet_format("Ahmed"))
+# print(dir(termcolor))
+print(termcolor.colored(pyfiglet.figlet_format("kyrolles"),'cyan'))
