@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
     new1_matrix = list(map(lambda x: x * x, matrix[0]))
     new2_matrix = list(map(lambda x: x * x, matrix[1]))
